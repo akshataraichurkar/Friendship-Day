@@ -1,28 +1,39 @@
 function openGift() {
-    alert("Button clicked!");
 
+    // Hide the welcome screen
     document.getElementById("welcome").style.display = "none";
+
+    // Show the main page
     document.getElementById("main").style.display = "block";
 
-    confetti({
-        particleCount:180,
-        spread:120,
-        origin:{y:0.6}
-    });
+    // Confetti animation (only if library is loaded)
+    if (typeof confetti === "function") {
+        confetti({
+            particleCount: 180,
+            spread: 120,
+            origin: { y: 0.6 }
+        });
+    }
 }
+
 function showMessage() {
 
-    document.getElementById("message").innerHTML =
-    `💖 Happy Friendship Day! 💖<br><br>
-    Dear Bestie,<br><br>
+    document.getElementById("message").innerHTML = `
+    💖 Happy Friendship Day! 💖 <br><br>
 
-    Thank you for being such an amazing friend. ❤️<br><br>
+    Dear Lyraa ❤️,<br><br>
 
-    Every laugh, every memory, every conversation and every moment with you is truly special to me. 🌸<br><br>
+    Thank you for being such an amazing friend.
+    You have always been there for me through every smile,
+    every laugh, and every difficult moment. 🌸<br><br>
 
-    No matter where life takes us, I hope we always stay friends forever. 🫂💕<br><br>
+    I truly feel lucky to have a friend like you.
+    Our memories together are very special,
+    and I hope our friendship lasts forever. 🫂💕<br><br>
 
-    Wishing you lots of happiness, success, good health and endless smiles. ✨<br><br>
+    May your life always be filled with happiness,
+    success, good health, and endless smiles. ✨<br><br>
 
-    Happy Friendship Day! 🌷❤️`;
+    🌷 Happy Friendship Day! 🌷❤️
+    `;
 }
