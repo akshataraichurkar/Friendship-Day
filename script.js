@@ -3,8 +3,13 @@ function openGift() {
     document.getElementById("welcome").style.display = "none";
     document.getElementById("main").style.display = "block";
 
-}
+    confetti({
+        particleCount:180,
+        spread:120,
+        origin:{y:0.6}
+    });
 
+}
 function showMessage() {
 
     document.getElementById("message").innerHTML =
