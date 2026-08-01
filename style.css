@@ -1,0 +1,153 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
+    min-height:100vh;
+}
+
+/* Welcome Screen */
+
+#welcome{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:linear-gradient(135deg,#ff6fa5,#ffc3d9);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    z-index:1000;
+}
+
+#welcome h1{
+    color:white;
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+#welcome p{
+    color:white;
+    font-size:22px;
+    margin-bottom:30px;
+}
+
+#welcome button{
+    padding:15px 35px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#ff1493;
+    font-size:20px;
+    cursor:pointer;
+}
+
+#welcome button:hover{
+    transform:scale(1.08);
+}
+
+/* Main Page */
+
+#main{
+    display:none;
+    padding:30px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+h1{
+    color:#ff1493;
+    margin-bottom:15px;
+}
+
+h2{
+    color:#ff4081;
+    margin-bottom:20px;
+}
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:nowrap;
+    margin:25px 0;
+}
+
+.gallery img{
+    width:180px;
+    height:180px;
+    object-fit:cover;
+    object-position:center;
+    border-radius:20px;
+    border:4px solid hotpink;
+    box-shadow:0 8px 15px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.08);
+}
+
+p{
+    font-size:19px;
+    color:#444;
+    line-height:1.7;
+}
+
+button{
+    margin-top:20px;
+    padding:15px 30px;
+    border:none;
+    border-radius:30px;
+    background:#ff4081;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#e91e63;
+}
+
+#message{
+    margin-top:25px;
+    color:#d81b60;
+    font-size:22px;
+}
+
+/* Floating Hearts */
+
+body::before{
+    content:"💖 💕 💗 💞 ❤️ 💓";
+    position:fixed;
+    top:-30px;
+    left:0;
+    width:100%;
+    font-size:30px;
+    opacity:.3;
+    animation:fall 10s linear infinite;
+}
+
+@keyframes fall{
+    from{
+        transform:translateY(-20px);
+    }
+    to{
+        transform:translateY(110vh);
+    }
+}
