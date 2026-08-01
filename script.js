@@ -1,4 +1,5 @@
 function openGift() {
+    alert("Button clicked!");
 
     document.getElementById("welcome").style.display = "none";
     document.getElementById("main").style.display = "block";
@@ -8,7 +9,6 @@ function openGift() {
         spread:120,
         origin:{y:0.6}
     });
-
 }
 function showMessage() {
 
