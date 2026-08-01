@@ -47,13 +47,14 @@ body{
     color:#ff1493;
     font-size:20px;
     cursor:pointer;
+    transition:.3s;
 }
 
 #welcome button:hover{
     transform:scale(1.08);
 }
 
-/* Main Page */
+/* Main */
 
 #main{
     display:none;
@@ -125,8 +126,12 @@ h2{
 /* Third Photo */
 
 .photo3{
+    width:150px;
+    height:170px;
     object-fit:contain;
+    object-position:center;
     background:white;
+    padding:3px;
 }
 
 p{
@@ -221,6 +226,11 @@ body::before{
     .gallery img{
         width:120px;
         height:120px;
+    }
+
+    .photo3{
+        width:120px;
+        height:140px;
     }
 
     h1{
